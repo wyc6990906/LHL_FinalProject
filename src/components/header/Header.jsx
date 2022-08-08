@@ -17,10 +17,10 @@ const Header = () => {
   //toggle nav in
   const toggleNav = () => {
     const mainMenu = document.querySelector('#main-menu')
-    if (mainMenu.style.display == 'block' ) {
+    if (mainMenu.style.display === 'block' ) {
       mainMenu.style.display = "none"
     }
-    if(mainMenu.style.display == 'none'){
+    if(mainMenu.style.display === 'none'){
       mainMenu.style.display = "block"
     }
   }

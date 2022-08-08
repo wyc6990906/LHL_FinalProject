@@ -1,11 +1,24 @@
 import React from 'react';
-
+import {useFetch} from "../../hooks/useFetch";
 import "./About.css"
 
 const About = () => {
+  const {data:articles,isPending,error} = useFetch('http://localhost:3000/articles')
+
   return (
     <div className="about-page">
       <div className="container">
+        {/*play hooks fetch data*/}
+        <div className="home">
+          {isPending && <div>loading...</div>}
+          {error && <div>{error}</div>}
+          {articles && articles.map((article) => (
+            <div key={article.id}  className="card">
+                <h3 style={{color:"white"}}>{article.title}</h3>
+                 <p>{article.author}</p>
+            </div>
+          ))}
+        </div>
         <div className="about-wrap">
           <div className="about-img">
             <img src="img/about-img.png" alt="about-img"/>
