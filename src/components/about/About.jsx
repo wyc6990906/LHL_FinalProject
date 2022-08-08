@@ -19,6 +19,7 @@ const About = () => {
             </div>
           ))}
         </div>
+
         <div className="about-wrap">
           <div className="about-img">
             <img src="img/about-img.png" alt="about-img"/>

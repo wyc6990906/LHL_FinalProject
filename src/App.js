@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 import './App.css'
 
@@ -21,6 +22,10 @@ function App() {
               </Route>
               <Route path="/about">
                 <About/>
+              </Route>
+              {/*No 404 page just redirect*/}
+              <Route path="*">
+                <Redirect to="/"/>
               </Route>
             </Switch>
           </section>
