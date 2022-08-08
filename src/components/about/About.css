@@ -1,0 +1,110 @@
+.about-page {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0px 100px 0px;
+}
+
+.about-page .about-text {
+  padding-top: 30px;
+}
+
+.about-page .about-img {
+  margin-bottom: 20px;
+}
+
+.about-page img {
+  margin: auto;
+}
+
+
+.about-page .the-text p {
+  color: #aaaaaa;
+}
+
+.about-gallery .gallery-block-wrap {
+  padding-bottom: 60px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  4a. GALLERY SECTION
+/*-----------------------------------------------------------------------------------*/
+.about-gallery {
+  padding: 0 20px;
+}
+
+.about-page .about-wrap .the-title h5 {
+  margin-bottom: 0;
+}
+
+
+.gallery-block-wrap .item-wrap {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-block-wrap .gallery-icon i {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+
+
+.gallery-block-wrap .column-gallery figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition-delay: .175s;
+  transition-delay: .175s;
+  justify-content: center;
+  box-sizing: border-box;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-block-wrap .column-gallery:hover figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  -webkit-transition-delay: .175s;
+  transition-delay: .175s;
+  justify-content: center;
+  box-sizing: border-box;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  align-items: center;
+}
+
+.imghvr-circle-top-left {
+  position: relative;
+}
+
+.imghvr-circle-top-left:before {
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  left: -25%;
+  right: -25%;
+  content: '';
+  -webkit-transform: translate(-100%, -100%);
+  transform: translate(-100%, -100%);
+  background-color: rgba(255, 44, 85, 0.55);
+  border-radius: 50%;
+  -webkit-transition: all .35s linear;
+  transition: all .35s linear;
+}
+
+.imghvr-circle-top-left:hover:before {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
