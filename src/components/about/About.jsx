@@ -1,25 +1,11 @@
 import React from 'react';
-import {useFetch} from "../../hooks/useFetch";
 import "./About.css"
 
 const About = () => {
-  const {data:articles,isPending,error} = useFetch('http://localhost:3000/articles')
 
   return (
     <div className="about-page">
       <div className="container">
-        {/*play hooks fetch data*/}
-        <div className="home">
-          {isPending && <div>loading...</div>}
-          {error && <div>{error}</div>}
-          {articles && articles.map((article) => (
-            <div key={article.id}  className="card">
-                <h3 style={{color:"white"}}>{article.title}</h3>
-                 <p>{article.author}</p>
-            </div>
-          ))}
-        </div>
-
         <div className="about-wrap">
           <div className="about-img">
             <img src="img/about-img.png" alt="about-img"/>
@@ -32,17 +18,19 @@ const About = () => {
             </div>
             <div className="the-text grid grid-cols-12 gap-24">
               <p className="col-span-4 sm:col-span-12 res:col-span-12">
-                For each project we establish relationships with partners who we know will help us create added value
-                for your project. As well as bringing together the public and private sectors, we make sector
-                overarching links to gather knowledge and to learn from each other.</p>
-              <p className="col-span-4 sm:col-span-12 res:col-span-12"> Sed ut perspiciatis unde omnis iste natus error
-                sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit.</p>
+                Discover Drum Machine, the best beat maker tool on the App Store!
+                You will make awesome beats in no time with its intuitive interface and easy to master features.
+                Making music is now accessible for anyone: master Drum Machine and start creating your own music.
+              </p>
+              <p className="col-span-4 sm:col-span-12 res:col-span-12"> Découvrez Drum Machine, le meilleur outil de
+                création de rythmes sur l'App Store ! Vous créerez des rythmes impressionnants en un rien de temps grâce
+                à son interface intuitive et ses fonctions faciles à maîtriser. Faire de la musique est désormais
+                accessible à tous : maîtrisez Drum Machine et commencez à créer votre propre musique.</p>
               <p className="col-span-4 sm:col-span-12 res:col-span-12">
-                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                explicabo. Nemo enim ipsam luptatem quia voluptas sit aspernatur aut odit.</p>
+                Entdecken Sie Drum Machine, das beste Beatmaking-Tool im App Store! Mit der intuitiven
+                Benutzeroberfläche und den leicht zu beherrschenden Funktionen werden Sie im Handumdrehen fantastische
+                Beats erstellen. Musik machen ist jetzt für jeden möglich: beherrschen Sie Drum Machine und beginnen
+                Sie, Ihre eigene Musik zu kreieren.</p>
             </div>
           </div>
         </div>

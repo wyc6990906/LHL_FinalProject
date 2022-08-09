@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
 import Video from "./components/video/Video";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,11 +18,14 @@ function App() {
           <Header/>
           <section className="content">
             <Switch>
-              <Route exact path="/">
+              <Route exact={true} path="/">
                 <Video/>
               </Route>
               <Route path="/about">
                 <About/>
+              </Route>
+              <Route path="/contact">
+                <Contact/>
               </Route>
               {/*No 404 page just redirect*/}
               <Route path="*">

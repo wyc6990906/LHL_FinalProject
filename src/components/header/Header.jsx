@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import  {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./Header.css"
 
 
@@ -17,10 +17,10 @@ const Header = () => {
   //toggle nav in
   const toggleNav = () => {
     const mainMenu = document.querySelector('#main-menu')
-    if (mainMenu.style.display === 'block' ) {
+    if (mainMenu.style.display === 'block') {
       mainMenu.style.display = "none"
     }
-    if(mainMenu.style.display === 'none'){
+    if (mainMenu.style.display === 'none') {
       mainMenu.style.display = "block"
     }
   }
@@ -58,7 +58,7 @@ const Header = () => {
                 <ul id="main-menu" className="sm sm-clean" onClick={toggleActiveMenu}>
                   <li className="menu-item"><Link to="/" className="menu-link">Home</Link></li>
                   <li className="menu-item"><Link to="/about" className="menu-link">About</Link></li>
-                  <li className="menu-item"><Link to="/drum" className="menu-link">Drum Machine</Link></li>
+                  <li className="menu-item"><Link to="/drum_machine" className="menu-link">Drum Machine</Link></li>
                   <li className="menu-item"><Link to="/tutorial" className="menu-link">Tutorial</Link></li>
                   <li className="menu-item"><Link to="/contact" className="menu-link">Contact</Link></li>
                 </ul>
