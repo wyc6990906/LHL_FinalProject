@@ -9,6 +9,7 @@ import {
   Redirect
 } from "react-router-dom";
 import './App.css'
+import DrumMachine from "./components/drumMachine/DrumMachine";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
               </Route>
               <Route path="/contact">
                 <Contact/>
+              </Route>
+              <Route path="/drum_machine">
+                <DrumMachine/>
               </Route>
               {/*No 404 page just redirect*/}
               <Route path="*">
