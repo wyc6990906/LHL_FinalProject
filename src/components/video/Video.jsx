@@ -10,7 +10,7 @@ const Video = () => {
         <div className="image-title">
           <p>At vero eos et accusamus et iusto odio dignissimos</p>
           <p> ducimus qui blanditiis</p>
-          <Link to="/drum" className="button-basic-1" data-aos="fade-up">Let's Play</Link>
+          <Link to="/drum_machine" className="button-basic-1" data-aos="fade-up">Let's Play</Link>
         </div>
         <div className="video-background">
           <video autoPlay muted loop id="myVideo">

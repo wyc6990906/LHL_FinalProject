@@ -2,6 +2,7 @@ import Header from "./components/header/Header";
 import Video from "./components/video/Video";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 import {
   BrowserRouter as Router,
   Switch,
@@ -37,7 +38,7 @@ function App() {
               </Route>
             </Switch>
           </section>
-
+        <Footer/>
 
         </div>
       </div>
