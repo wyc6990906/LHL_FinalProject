@@ -42,7 +42,7 @@ function App() {
               </Route>
             </Switch>
           </section>
-        <Footer/>
+          <Footer/>
 
         </div>
       </div>

@@ -77,7 +77,7 @@ const Contact = () => {
             <div className="block-location">
               <div className="dugem-text clearfix">
                 <h3 className="text-white">Contact</h3>
-                <p>github.com/wyc6990906</p>
+                <p>https://github.com/wyc6990906/LHL_FinalProject</p>
               </div>
             </div>
           </div>
