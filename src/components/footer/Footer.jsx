@@ -18,11 +18,11 @@ const Footer = () => {
               <div className="foot-col column column-1 text-center clearfix">
                 <div className="social-footer">
                   <ul>
-                    <li className="soc-icon"><a href="#">Twitter</a></li>
-                    <li className="soc-icon"><a href="#">Facebook</a></li>
-                    <li className="soc-icon"><a href="#">Instagram</a></li>
-                    <li className="soc-icon"><a href="#">Linkedin</a></li>
-                    <li className="soc-icon"><a href="#">Github</a></li>
+                    <li className="soc-icon"><a href="/">Twitter</a></li>
+                    <li className="soc-icon"><a href="/">Facebook</a></li>
+                    <li className="soc-icon"><a href="/">Instagram</a></li>
+                    <li className="soc-icon"><a href="/">Linkedin</a></li>
+                    <li className="soc-icon"><a href="https://github.com/wyc6990906/LHL_FinalProject">Github</a></li>
                   </ul>
                 </div>
               </div>

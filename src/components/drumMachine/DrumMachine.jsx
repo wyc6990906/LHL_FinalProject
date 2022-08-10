@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useState, useRef,useEffect} from 'react';
+import DrumPad from "../drumPad/DrumPad";
 import "./DrumMachine.css"
 
-const DrumMachine = () => {
+const DrumMachine = (props) => {
+  const volumeHandler = useRef()
+  const iconVolume = useRef()
+  const displayVolumeValue = useRef()
+  const switchBank = useRef()
+  const switchBankLabel = useRef()
+  // flag of componentDidUpdate()
+  const mounting = useRef(true);
+
+
+  const [bankIndex, setBankIndex] = useState(0)
+  const [volumeValue, setVolumeValue] = useState(50)
+  const [displayText, setDisplayText] = useState('DRUM MACHINE')
   const bankOne = [{
     keyCode: 81,
     keyTrigger: 'Q',
@@ -49,7 +62,6 @@ const DrumMachine = () => {
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
   },
   ];
-
   const bankTwo = [{
     keyCode: 81,
     keyTrigger: 'Q',
@@ -97,9 +109,7 @@ const DrumMachine = () => {
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
   }
   ];
-
   const banks = [bankOne, bankTwo];
-
   const volumeHandlerStyle = {
     "--min": 0,
     "--max": 100,
@@ -120,9 +130,93 @@ const DrumMachine = () => {
     "--thumb-color": "#202020",
     "--thumb-border": "1px solid #000"
   };
+
+  const onBankChanged = ({target}) => {
+    const bankIndex = target.checked ? 1 : 0;
+    setBankIndex(bankIndex)
+    setDisplayText('DRUM MACHINE')
+  }
+
+  const updateDisplayText = (text) => {
+    setDisplayText(text)
+  }
+  //equal to componentDidUpdate()
+  useEffect(() => {
+    if (mounting.current) {
+      console.log("DidMount")
+      mounting.current = false;
+      return
+    }
+    console.log("DidUpdated")
+    // if (this.hideVolumeTimeout) {
+    //   clearTimeout(this.hideVolumeTimeout);
+    //   this.hideVolumeTimeout = null;
+    // }
+    // else {
+    //   this.hideVolumeTimeout = setTimeout(() => {
+    //     displayVolumeValue.current.style.setProperty('opacity', 0);
+    //   }, 1000);
+    // }
+  });
+
+  const onVolumeChanged = ({target}) => {
+    const value = Number.parseInt(target.value, 10);
+    const volumeHandlerElm = volumeHandler.current;
+    const iconVolumeElm = iconVolume.current;
+    const displayVolumeValueElm = displayVolumeValue.current;
+    volumeHandlerElm.style.setProperty('--val', value);
+    if (value === 0) iconVolumeElm.className = "fas fa-volume-off";
+    else if (value < 50) iconVolumeElm.className = "fas fa-volume-down";
+    else iconVolumeElm.className = "fas fa-volume-up";
+    displayVolumeValueElm.style.setProperty('opacity', 1);
+    setTimeout(() => {
+      displayVolumeValueElm.style.setProperty('opacity', 0);
+    }, 1000);
+    setVolumeValue(value)
+  }
+
+  const onMouseLeaveInput = () => {
+    setTimeout(() => {
+      displayVolumeValue.current.style.setProperty('opacity', 0);
+    }, 1000);
+  }
+
+
   return (
     <div className="drum-section">
       <div className="container">
+        <div className="drum" id="drum-machine">
+          <div className="drum-display" id="display">
+            <h1>{displayText}</h1>
+          </div>
+          <div className="drum-control">
+            <div className="drum-control-volumn">
+              <i className="fas fa-volume-down" ref={iconVolume}/>
+              <span> Volume</span>
+              <span className="drum-control-volumn-value" ref={displayVolumeValue}> {volumeValue}</span>
+              <input type="range" onInput={onVolumeChanged} onMouseLeave={onMouseLeaveInput} style={volumeHandlerStyle} ref={volumeHandler} />
+            </div>
+            <div className="drum-control-bank">
+              <div>{bankIndex ? "Smooth Piano Kit" : "Heater Kit"}</div>
+              <label className="switch" title="Switch bank">
+                <input type="checkbox" onChange={onBankChanged} ref={switchBank}/>
+                <span className="slider round" ref={switchBankLabel}/>
+              </label>
+            </div>
+          </div>
+          <div className="drum-pads">
+            {
+              banks[bankIndex].map((item, idx) => {
+                return <DrumPad
+                  key={idx}
+                  padItem={item}
+                  updateDisplayText={updateDisplayText}
+                  volumeValue={volumeValue} />
+              })
+            }
+          </div>
+
+        </div>
       </div>
     </div>
   );
