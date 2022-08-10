@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
 import Video from "./components/video/Video";
 import About from "./components/about/About";
+import Tutorial from "./components/tutorial/Tutorial";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import {
@@ -31,6 +32,9 @@ function App() {
               </Route>
               <Route path="/drum_machine">
                 <DrumMachine/>
+              </Route>
+              <Route path="/tutorial">
+                <Tutorial/>
               </Route>
               {/*No 404 page just redirect*/}
               <Route path="*">

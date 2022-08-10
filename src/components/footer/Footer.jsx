@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import "./Footer.css"
 
 const Footer = () => {
@@ -30,8 +29,8 @@ const Footer = () => {
                 <div id="copyright" className="copyright-text">
                   © Copyright 2021, Built by ThemesAwesome All rights By
                   <br/>
-                  <Link to="https://github.com/wyc6990906/LHL_FinalProject"> Aidan Prior,
-                    Boluwatife Ade Ogunlola, Dylan Wang.</Link>
+                  <a href="https://github.com/wyc6990906/LHL_FinalProject"> Aidan Prior,
+                    Boluwatife Ade Ogunlola, Dylan Wang.</a>
                 </div>
               </div>
             </div>

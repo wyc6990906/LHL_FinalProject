@@ -8,8 +8,7 @@ const DrumMachine = (props) => {
   const displayVolumeValue = useRef()
   const switchBank = useRef()
   const switchBankLabel = useRef()
-  // flag of componentDidUpdate()
-  const mounting = useRef(true);
+
 
 
   const [bankIndex, setBankIndex] = useState(0)
@@ -140,24 +139,6 @@ const DrumMachine = (props) => {
   const updateDisplayText = (text) => {
     setDisplayText(text)
   }
-  //equal to componentDidUpdate()
-  useEffect(() => {
-    if (mounting.current) {
-      console.log("DidMount")
-      mounting.current = false;
-      return
-    }
-    console.log("DidUpdated")
-    // if (this.hideVolumeTimeout) {
-    //   clearTimeout(this.hideVolumeTimeout);
-    //   this.hideVolumeTimeout = null;
-    // }
-    // else {
-    //   this.hideVolumeTimeout = setTimeout(() => {
-    //     displayVolumeValue.current.style.setProperty('opacity', 0);
-    //   }, 1000);
-    // }
-  });
 
   const onVolumeChanged = ({target}) => {
     const value = Number.parseInt(target.value, 10);
@@ -194,7 +175,8 @@ const DrumMachine = (props) => {
               <i className="fas fa-volume-down" ref={iconVolume}/>
               <span> Volume</span>
               <span className="drum-control-volumn-value" ref={displayVolumeValue}> {volumeValue}</span>
-              <input type="range" onInput={onVolumeChanged} onMouseLeave={onMouseLeaveInput} style={volumeHandlerStyle} ref={volumeHandler} />
+              <input id="volumeControl"
+                     type="range" onInput={onVolumeChanged} onMouseLeave={onMouseLeaveInput} style={volumeHandlerStyle} ref={volumeHandler} />
             </div>
             <div className="drum-control-bank">
               <div>{bankIndex ? "Smooth Piano Kit" : "Heater Kit"}</div>
