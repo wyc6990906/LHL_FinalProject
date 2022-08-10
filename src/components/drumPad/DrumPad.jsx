@@ -30,7 +30,6 @@ export default class DrumPad extends Component {
 
   onKeyUp(event) {
     const root = ReactDOM.findDOMNode(this);
-
     if (event.keyCode === this.props.padItem.keyCode) {
       setTimeout(() => {
         root.classList.remove("active");
