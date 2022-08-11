@@ -1,0 +1,33 @@
+.tutorialButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.tutorialDrum {
+  margin-top: -120px;
+}
+
+.tutorialButton  .button-tutorial {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  fill: #ffffff;
+  color: #ffffff;
+  background-color: #ff2c55;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #ff2c55;
+  border-radius: 50px 50px 50px 50px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.button-tutorial:hover {
+  transform: translateY(8px);
+  color: #ffffff;
+  background-color: #ff2c55;
+  border-color: #ff2c55;
+}
+

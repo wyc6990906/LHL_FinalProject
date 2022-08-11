@@ -43,7 +43,6 @@ function App() {
             </Switch>
           </section>
           <Footer/>
-
         </div>
       </div>
     </Router>

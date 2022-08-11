@@ -1,18 +1,17 @@
-import React, {useState, useRef,useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import DrumMachine from "../drumMachine/DrumMachine";
 import DrumPad from "../drumPad/DrumPad";
 import "../drumMachine/DrumMachine.css"
+import "./Tutorial.css"
 import Driver from "driver.js"
 import 'driver.js/dist/driver.min.css';
-
 
 const Tutorial = () => {
   // flag of componentDidUpdate()
   const mounting = useRef(true);
   //equal to componentDidUpdate()
-
   //driver.js
-  const demo = ()=>{
+  const demo = () => {
     const driver = new Driver();
     driver.defineSteps([
       {
@@ -27,50 +26,57 @@ const Tutorial = () => {
       {
         element: '#volumeControl',
         popover: {
-          title: 'Volume control ',
+          title: 'Volume control',
           description: 'You can adjust the volume by swiping here!',
           position: 'bottom'
         }
       },
       {
-        element: '#button3',
+        element: '#switchBank',
         popover: {
-          title: 'Title on Popover',
-          description: 'Body of the popover',
+          title: 'Switch Music Bank',
+          description: 'You can change music bank by clicking here!',
           position: 'right'
+        }
+      },
+      {
+        element: '#Clap',
+        popover: {
+          title: 'Play the drum machine',
+          description: 'Press the appropriate key to play~~~',
+          position: 'top'
         }
       },
     ]);
     // Start the introduction
     driver.start();
   }
-
+  // forceUpdate
+  const forceUpdate = () => {
+    window.location.reload()
+  }
 
   useEffect(() => {
     if (mounting.current) {
-      console.log("DidMount")
+      // console.log("DidMount")
       demo()
       mounting.current = false;
       return
     }
-    console.log("DidUpdated")
-    // if (this.hideVolumeTimeout) {
-    //   clearTimeout(this.hideVolumeTimeout);
-    //   this.hideVolumeTimeout = null;
-    // }
-    // else {
-    //   this.hideVolumeTimeout = setTimeout(() => {
-    //     displayVolumeValue.current.style.setProperty('opacity', 0);
-    //   }, 1000);
-    // }
+    // console.log("DidUpdated")
   });
 
   return (
-    <div className="drum-section" style={{marginTop: "-100px"}}>
+    <div className="drum-section">
       <div className="container">
-        <DrumMachine>
-          <DrumPad/>
-        </DrumMachine>
+        <div className="tutorialButton">
+          <button className="button-tutorial" onClick={() => forceUpdate()}>Get Start</button>
+        </div>
+        <div className="tutorialDrum">
+          <DrumMachine>
+            <DrumPad/>
+          </DrumMachine>
+        </div>
       </div>
     </div>
   );

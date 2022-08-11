@@ -1,4 +1,4 @@
-import React, {useState, useRef,useEffect} from 'react';
+import React, {useState, useRef} from 'react';
 import DrumPad from "../drumPad/DrumPad";
 import "./DrumMachine.css"
 
@@ -182,7 +182,7 @@ const DrumMachine = (props) => {
               <div>{bankIndex ? "Smooth Piano Kit" : "Heater Kit"}</div>
               <label className="switch" title="Switch bank">
                 <input type="checkbox" onChange={onBankChanged} ref={switchBank}/>
-                <span className="slider round" ref={switchBankLabel}/>
+                <span id="switchBank" className="slider round" ref={switchBankLabel}/>
               </label>
             </div>
           </div>
