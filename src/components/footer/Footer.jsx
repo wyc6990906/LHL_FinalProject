@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
               <div className="foot-col column column-1 text-center clearfix">
                 <div id="copyright" className="copyright-text">
-                  © Copyright 2021, Built by ThemesAwesome All rights By
+                  © Copyright 2022, Built by LighthouseLabs All rights By
                   <br/>
                   <a href="https://github.com/wyc6990906/LHL_FinalProject"> Aidan Prior,
                     Boluwatife Ade Ogunlola, Dylan Wang.</a>
