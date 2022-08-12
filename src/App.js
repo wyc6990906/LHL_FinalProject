@@ -3,6 +3,7 @@ import Video from "./components/video/Video";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import Login from "./components/login/login";
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,6 +32,9 @@ function App() {
               </Route>
               <Route path="/drum_machine">
                 <DrumMachine/>
+              </Route>
+              <Route path="/login">
+                <Login/>
               </Route>
               {/*No 404 page just redirect*/}
               <Route path="*">
