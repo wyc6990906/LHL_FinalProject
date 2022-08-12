@@ -2,13 +2,16 @@ import React, {useState} from 'react';
 import "./login.css"
 
 
-const Login = () => {
+const Signup = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [confirm, setConfirm] = useState('')
+
 
   const resetForm = () => {
     setUsername("")
     setPassword('')
+    setConfirm('')
   }
 
   //submit form
@@ -17,6 +20,7 @@ const Login = () => {
     const feedback = {
       username,
       password,
+      confirm
     }
     //send request
     console.log(feedback)
@@ -30,10 +34,10 @@ const Login = () => {
           <div className="the-title text-left col-span-9 sm:col-span-12 res:col-span-12">
             <div className="contact-title">
               <h5 className="head-title-2 text-white">
-                <span style={{color: "red"}}>/ Login</span>
+                <span style={{color: "red"}}>/ Signup</span>
               </h5>
               <h2 className="head-title-1">
-                Please Login
+                Please Signup
               </h2>
             </div>
             {/*login form*/}
@@ -47,11 +51,14 @@ const Login = () => {
                 <input type="text" name="password" size="40" onChange={(e) => setPassword(e.target.value)} value={password}
                        placeholder="Password"/>
               </label>
+              <label>
+                <input type="text" name="confirm" size="40" onChange={(e) => setConfirm(e.target.value)} value={confirm}
+                       placeholder="Confirm"/>
+              </label>
               
               <label>
-                <input type="submit" value="Login" className="button-basic-1"/>
+                <input type="submit" value="Sign up" className="button-basic-1"/>
               </label>
-              <a className='button-basic-1' href='/signup'>Sign Up</a>
 
             </form>
           </div>
@@ -61,4 +68,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

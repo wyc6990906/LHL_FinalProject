@@ -4,6 +4,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Login from "./components/login/login";
+import Signup from "./components/login/signup";
 import {
   BrowserRouter as Router,
   Switch,
@@ -35,6 +36,9 @@ function App() {
               </Route>
               <Route path="/login">
                 <Login/>
+              </Route>
+              <Route path="/signup">
+                <Signup/>
               </Route>
               {/*No 404 page just redirect*/}
               <Route path="*">
