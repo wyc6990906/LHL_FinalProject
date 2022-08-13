@@ -2,6 +2,7 @@ import React from 'react';
 import "./Footer.css"
 
 const Footer = () => {
+
   return (
     <footer id="footer" className="footer clearfix">
       <div className="footer-wrap clearfix">
