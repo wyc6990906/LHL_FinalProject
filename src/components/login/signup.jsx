@@ -48,11 +48,11 @@ const Signup = () => {
                        value={username} placeholder="Username"/>
               </label>
               <label>
-                <input type="text" name="password" size="40" onChange={(e) => setPassword(e.target.value)} value={password}
+                <input type="password" name="password" size="40" onChange={(e) => setPassword(e.target.value)} value={password}
                        placeholder="Password"/>
               </label>
               <label>
-                <input type="text" name="confirm" size="40" onChange={(e) => setConfirm(e.target.value)} value={confirm}
+                <input type="password" name="confirm" size="40" onChange={(e) => setConfirm(e.target.value)} value={confirm}
                        placeholder="Confirm"/>
               </label>
               
