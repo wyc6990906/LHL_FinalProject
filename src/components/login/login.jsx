@@ -20,11 +20,14 @@ const Login = () => {
       password,
     }
     axios.post('/login', feedback)
+    .then((requst) => {
+      console.log(requst);
+    })
     .catch( (error) => {
       console.log(error);
     });
     //send request
-    console.log(feedback)
+    // console.log(feedback)
     resetForm()
   }
 

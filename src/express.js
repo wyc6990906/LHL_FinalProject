@@ -19,7 +19,8 @@ app.use(cookieSession({ //Encryption for user cookies
 }));
 
 app.post("/login", (req,res) => {
-  res.redirect("/")
+  console.log("req found")
+  res.redirect("/");
 });
 
 app.listen(PORT, function(err){
