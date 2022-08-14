@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./login.css"
+import axios from 'axios';
 
 
 const Login = () => {
@@ -18,6 +19,10 @@ const Login = () => {
       username,
       password,
     }
+    axios.post('/login', feedback)
+    .catch( (error) => {
+      console.log(error);
+    });
     //send request
     console.log(feedback)
     resetForm()
