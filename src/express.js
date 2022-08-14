@@ -22,8 +22,8 @@ app.post("/login", (req,res) => {
   res.redirect("/")
 });
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}!`);
-});
-
+app.listen(PORT, function(err){
+  if (err) console.log("Error in server setup")
+  console.log("Server listening on Port", PORT);
+})
 
