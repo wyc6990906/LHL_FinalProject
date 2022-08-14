@@ -1,7 +1,7 @@
 //Setup prerequisites
 const express = require("express");
 const app = express();
-const PORT = 3000; // default port 8080
+const PORT = 3001; // default port 8080
 const bodyParser = require("body-parser");
 const cookieSession = require('cookie-session');
 
