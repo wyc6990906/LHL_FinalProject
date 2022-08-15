@@ -12,6 +12,7 @@ const {hasher, comparer} = require('./crypt');
 app.set("view engine", "ejs");
 
 
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(cookieSession({ //Encryption for user cookies
@@ -23,7 +24,7 @@ app.use(cookieSession({ //Encryption for user cookies
 
 app.post("/login", (req,res) => {
   console.log("req found")
-  res.redirect("/");
+  res.send("succses");
 });
 
 app.post("/signup", (req,res) => {
