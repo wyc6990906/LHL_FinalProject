@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import "./login.css"
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+
 
 
 const Signup = () => {
+  const history = useHistory()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
@@ -25,7 +28,7 @@ const Signup = () => {
     }
     axios.post('/signup', feedback)
     .then((requst) => {
-      console.log(requst);
+      history.push("/")
     })
     .catch( (error) => {
       console.log(error);
