@@ -73,7 +73,7 @@ const Tutorial = () => {
     <div className="drum-section">
       <div className="container">
         <div className="tutorialButton">
-          <button className="button-tutorial" onClick={() => forceUpdate()}>Get Start</button>
+          <button className="button-tutorial" onClick={() => forceUpdate()}>Get Started</button>
         </div>
         <div className="tutorialDrum">
           <DrumMachine>
