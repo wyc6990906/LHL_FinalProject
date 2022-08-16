@@ -1,4 +1,4 @@
-import React, {useState, useRef,useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import DrumPad from "../drumPad/DrumPad";
 import DemoMusicPlayer from "../demoMusicPlayer/DemoMusicPlayer";
 import DemoSongItems from "../demoSongItems/DemoSongItems";
@@ -10,6 +10,11 @@ const DrumMachine = (props) => {
   const displayVolumeValue = useRef()
   const switchBank = useRef()
   const switchBankLabel = useRef()
+
+
+  //mp3 recorder
+
+
 
   //demoMusicPlayer
   const URL = "https://examples.devmastery.pl/songs-api/songs";
@@ -23,6 +28,8 @@ const DrumMachine = (props) => {
   }, []);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const currentSong = songs[currentSongIndex];
+
+
   function handleSelectSong(selectedSong) {
     const audioIndex = songs.findIndex(
       (song) => song.audioUrl === selectedSong.audioUrl
@@ -32,6 +39,7 @@ const DrumMachine = (props) => {
     }
   }
 
+  //drum machine set up
   const [bankIndex, setBankIndex] = useState(0)
   const [volumeValue, setVolumeValue] = useState(50)
   const [displayText, setDisplayText] = useState('DRUM MACHINE')
@@ -180,7 +188,7 @@ const DrumMachine = (props) => {
   const onMouseLeaveInput = () => {
     setTimeout(() => {
       displayVolumeValue.current.style.setProperty('opacity', 0);
-    }, 1000);
+    }, 2000);
   }
 
 
@@ -197,7 +205,8 @@ const DrumMachine = (props) => {
               <span> Volume</span>
               <span className="drum-control-volumn-value" ref={displayVolumeValue}> {volumeValue}</span>
               <input id="volumeControl"
-                     type="range" onInput={onVolumeChanged} onMouseLeave={onMouseLeaveInput} style={volumeHandlerStyle} ref={volumeHandler} />
+                     type="range" onInput={onVolumeChanged} onMouseLeave={onMouseLeaveInput} style={volumeHandlerStyle}
+                     ref={volumeHandler}/>
             </div>
             <div className="drum-control-bank">
               <div>{bankIndex ? "Smooth Piano Kit" : "Heater Kit"}</div>
@@ -214,19 +223,19 @@ const DrumMachine = (props) => {
                   key={idx}
                   padItem={item}
                   updateDisplayText={updateDisplayText}
-                  volumeValue={volumeValue} />
+                  volumeValue={volumeValue}/>
 
               })
             }
           </div>
 
 
-        {/*  demoPlayer*/}
-          {songs.length ===0? (
+          {/*  demoPlayer*/}
+          {songs.length === 0 ? (
             <p>Loading....</p>
-          ): (
+          ) : (
             <div className="playerContainer">
-              <DemoMusicPlayer song={currentSong} />
+              <DemoMusicPlayer song={currentSong}/>
               <section className="Songs">
                 <h4 className="head-title-1 title-center">PlayList</h4>
                 <ul>
