@@ -4,8 +4,7 @@ import About from "./components/about/About";
 import Tutorial from "./components/tutorial/Tutorial";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import Audio from "./components/audio.component";
+import Mp3Recorder from "./components/mp3Recorder/Mp3Recorder";
 import {
   BrowserRouter as Router,
   Switch,
@@ -33,8 +32,8 @@ function App() {
                 <Contact/>
               </Route>
               <Route path="/drum_machine">
+                <Mp3Recorder/>
                 <DrumMachine/>
-                <Audio/>
               </Route>
               <Route path="/tutorial">
                 <Tutorial/>

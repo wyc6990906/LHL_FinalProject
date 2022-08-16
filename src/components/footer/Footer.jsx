@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
 
               <div className="foot-col column column-1 text-center clearfix">
-                <div className="social-footer">
+                <div className="social-footer" style={{marginTop:"15px"}}>
                   <ul>
                     <li className="soc-icon"><a href="/">Twitter</a></li>
                     <li className="soc-icon"><a href="/">Facebook</a></li>
