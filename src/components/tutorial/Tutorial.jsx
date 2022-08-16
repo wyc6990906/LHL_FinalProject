@@ -17,7 +17,7 @@ const Tutorial = () => {
     const driver = new Driver();
     driver.defineSteps([
       {
-        element: '#drum-machine',
+        element: '#display',
         popover: {
           className: 'first-step-popover-class',
           title: 'Ready to start?',
@@ -49,6 +49,30 @@ const Tutorial = () => {
           position: 'top'
         }
       },
+      {
+        element: '#playList',
+        popover: {
+          title: 'Pick a background music',
+          description: 'Click what you want~',
+          position: 'right'
+        }
+      },
+      {
+        element: '#play',
+        popover: {
+          title: 'Play',
+          description: 'Click to play the background music~',
+          position: 'left'
+        }
+      },
+      {
+        element: '#pause',
+        popover: {
+          title: 'Pause',
+          description: 'Click to pause the background music~',
+          position: 'right'
+        }
+      },
     ]);
     // Start the introduction
     driver.start();
@@ -62,11 +86,14 @@ const Tutorial = () => {
   useEffect(() => {
     if (mounting.current) {
       // console.log("DidMount")
-      demo()
+      setTimeout(()=>{
+        demo()
+      },500)
       mounting.current = false;
       return
     }
     // console.log("DidUpdated")
+    demo()
   });
 
   return (

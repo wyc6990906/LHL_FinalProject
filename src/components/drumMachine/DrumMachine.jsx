@@ -1,5 +1,7 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef,useEffect} from 'react';
 import DrumPad from "../drumPad/DrumPad";
+import DemoMusicPlayer from "../demoMusicPlayer/DemoMusicPlayer";
+import DemoSongItems from "../demoSongItems/DemoSongItems";
 import "./DrumMachine.css"
 
 const DrumMachine = (props) => {
@@ -9,7 +11,26 @@ const DrumMachine = (props) => {
   const switchBank = useRef()
   const switchBankLabel = useRef()
 
-
+  //demoMusicPlayer
+  const URL = "https://examples.devmastery.pl/songs-api/songs";
+  const [songs, setSongs] = useState([]);
+  useEffect(() => {
+    fetch(URL).then((response) => {
+      if (response.ok) {
+        response.json().then(setSongs);
+      }
+    });
+  }, []);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const currentSong = songs[currentSongIndex];
+  function handleSelectSong(selectedSong) {
+    const audioIndex = songs.findIndex(
+      (song) => song.audioUrl === selectedSong.audioUrl
+    );
+    if (audioIndex >= 0) {
+      setCurrentSongIndex(audioIndex);
+    }
+  }
 
   const [bankIndex, setBankIndex] = useState(0)
   const [volumeValue, setVolumeValue] = useState(50)
@@ -194,10 +215,33 @@ const DrumMachine = (props) => {
                   padItem={item}
                   updateDisplayText={updateDisplayText}
                   volumeValue={volumeValue} />
+
               })
             }
           </div>
 
+
+        {/*  demoPlayer*/}
+          {songs.length ===0? (
+            <p>Loading....</p>
+          ): (
+            <div className="playerContainer">
+              <DemoMusicPlayer song={currentSong} />
+              <section className="Songs">
+                <h4 className="head-title-1 title-center">PlayList</h4>
+                <ul>
+                  {songs.map((song) => (
+                    <DemoSongItems
+                      key={song.audioUrl}
+                      song={song}
+                      isCurrent={currentSong.audioUrl === song.audioUrl}
+                      onSelect={handleSelectSong}
+                    />
+                  ))}
+                </ul>
+              </section>
+            </div>
+          )}
         </div>
       </div>
     </div>
