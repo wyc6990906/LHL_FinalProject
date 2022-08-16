@@ -4,6 +4,8 @@ import About from "./components/about/About";
 import Tutorial from "./components/tutorial/Tutorial";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import Audio from "./components/audio.component";
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,6 +34,7 @@ function App() {
               </Route>
               <Route path="/drum_machine">
                 <DrumMachine/>
+                <Audio/>
               </Route>
               <Route path="/tutorial">
                 <Tutorial/>

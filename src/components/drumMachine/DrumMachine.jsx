@@ -10,7 +10,6 @@ const DrumMachine = (props) => {
   const switchBankLabel = useRef()
 
 
-
   const [bankIndex, setBankIndex] = useState(0)
   const [volumeValue, setVolumeValue] = useState(50)
   const [displayText, setDisplayText] = useState('DRUM MACHINE')
