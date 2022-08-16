@@ -3,9 +3,10 @@
   display: flex;
   justify-content: center;
   z-index: 2;
+  margin-top: 20px;
 }
 .tutorialDrum {
-  margin-top: -120px;
+  margin-top: -100px;
 }
 
 .tutorialButton  .button-tutorial {
