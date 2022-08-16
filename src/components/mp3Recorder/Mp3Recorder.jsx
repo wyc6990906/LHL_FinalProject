@@ -3,7 +3,6 @@ import {Recorder} from 'react-voice-recorder'
 import 'react-voice-recorder/dist/index.css'
 import "./Mp3Recorder.css"
 
-
 class Mp3Recorder extends Component {
   constructor(props) {
     super(props);
