@@ -5,10 +5,12 @@ import "../drumMachine/DrumMachine.css"
 import "./Tutorial.css"
 import Driver from "driver.js"
 import 'driver.js/dist/driver.min.css';
+import { useHistory } from 'react-router-dom'
 
 const Tutorial = () => {
   // flag of componentDidUpdate()
   const mounting = useRef(true);
+  const history = useHistory()
   //equal to componentDidUpdate()
   //driver.js
   const demo = () => {
@@ -53,7 +55,8 @@ const Tutorial = () => {
   }
   // forceUpdate
   const forceUpdate = () => {
-    window.location.reload()
+    // window.location.reload()
+    history.go(0)
   }
 
   useEffect(() => {
@@ -70,7 +73,7 @@ const Tutorial = () => {
     <div className="drum-section">
       <div className="container">
         <div className="tutorialButton">
-          <button className="button-tutorial" onClick={() => forceUpdate()}>Get Start</button>
+          <button className="button-tutorial" onClick={() => forceUpdate()}>Get Started</button>
         </div>
         <div className="tutorialDrum">
           <DrumMachine>
