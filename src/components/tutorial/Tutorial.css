@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 9999;
   margin-top: 20px;
 }
 .tutorialDrum {
