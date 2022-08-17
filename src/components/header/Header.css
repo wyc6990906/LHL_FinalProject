@@ -1,6 +1,8 @@
 /*Header basic*/
 header {
   position: relative;
+  z-index: 9999;
+  margin-top: -20px;
 }
 
 .main-nav {
