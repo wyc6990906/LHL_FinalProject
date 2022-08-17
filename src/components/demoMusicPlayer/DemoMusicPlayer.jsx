@@ -1,5 +1,6 @@
 import { useRef  } from "react";
 import "./DemoMusicPlayer.css";
+const musicDemo1 = '../../music_instrument/'
 
 const DemoMusicPlayer = ({ showControls = false, song }) => {
   const audioRef = useRef();

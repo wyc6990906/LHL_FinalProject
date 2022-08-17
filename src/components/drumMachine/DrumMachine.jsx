@@ -17,7 +17,7 @@ const DrumMachine = (props) => {
 
 
   //demoMusicPlayer
-  const URL = "https://examples.devmastery.pl/songs-api/songs";
+  const URL = "http://localhost:3000/songs";
   const [songs, setSongs] = useState([]);
   useEffect(() => {
     fetch(URL).then((response) => {

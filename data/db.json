@@ -1,22 +1,53 @@
 {
-  "articles": [
+  "songs": [
+    {
+      "id": "7",
+      "title": "Edm x pop retro",
+      "artist": "Vicii",
+      "audioUrl": "/music_sample/phoenix-yeat-kankan.wav",
+      "coverUrl": "https://i1.sndcdn.com/artworks-WvE32Ch0JZh16mLj-CPHA5g-t500x500.jpg"
+    },
     {
       "id": "1",
-      "title": "Welcome to the Site",
-      "author": "Mario",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ullam eos dignissimos aperiam rerum qui suscipit cum nobis, totam ea tenetur perferendis praesentium corporis possimus ducimus et minima voluptatum. Numquam mollitia culpa consectetur unde illum est aut dicta eligendi vero molestias impedit sint, maiores saepe voluptas necessitatibus excepturi ducimus repudiandae, non quidem nobis veritatis! Libero neque, cumque illo est corrupti eaque recusandae ipsum, ut debitis vitae molestias deleniti voluptates distinctio sapiente autem. Tempore aperiam minima sit atque, tempora doloribus blanditiis id ipsum. Distinctio quos nisi, totam sunt ex voluptatum? Neque alias laborum ipsum doloremque fuga earum in autem. Hic alias omnis facilis facere eum assumenda deleniti ad, maiores laudantium temporibus odio non, molestiae dolorum! Quo mollitia ex sapiente maiores excepturi?"
+      "title": "Chasing Light",
+      "artist": "Emily Sprague",
+      "audioUrl": "/music_sample/EmilySprague_ChasingLight.mp3",
+      "coverUrl": "https://i1.sndcdn.com/artworks-07l4sYHedUDkstzU-JSC3nA-t500x500.jpg"  
     },
     {
       "id": "2",
-      "title": "5 React Tips for Beginners",
-      "author": "Luigi",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ullam eos dignissimos aperiam rerum qui suscipit cum nobis, totam ea tenetur perferendis praesentium corporis possimus ducimus et minima voluptatum. Numquam mollitia culpa consectetur unde illum est aut dicta eligendi vero molestias impedit sint, maiores saepe voluptas necessitatibus excepturi ducimus repudiandae, non quidem nobis veritatis! Libero neque, cumque illo est corrupti eaque recusandae ipsum, ut debitis vitae molestias deleniti voluptates distinctio sapiente autem. Tempore aperiam minima sit atque, tempora doloribus blanditiis id ipsum. Distinctio quos nisi, totam sunt ex voluptatum? Neque alias laborum ipsum doloremque fuga earum in autem. Hic alias omnis facilis facere eum assumenda deleniti ad, maiores laudantium temporibus odio non, molestiae dolorum! Quo mollitia ex sapiente maiores excepturi?"
+      "title": "Rythm loop",
+      "artist": "Lucia",
+      "audioUrl": "/music_sample/afro-latin-guitar-melody-loop-lucia.wav",
+      "coverUrl": "https://render.fineartamerica.com/images/rendered/medium/poster/8/5.5/break/images/artworkimages/medium/1/soul-jazz-leon-zernitsky.jpg"
     },
     {
       "id": "3",
-      "title": "VS Code Best Packages",
-      "author": "Mario",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ullam eos dignissimos aperiam rerum qui suscipit cum nobis, totam ea tenetur perferendis praesentium corporis possimus ducimus et minima voluptatum. Numquam mollitia culpa consectetur unde illum est aut dicta eligendi vero molestias impedit sint, maiores saepe voluptas necessitatibus excepturi ducimus repudiandae, non quidem nobis veritatis! Libero neque, cumque illo est corrupti eaque recusandae ipsum, ut debitis vitae molestias deleniti voluptates distinctio sapiente autem. Tempore aperiam minima sit atque, tempora doloribus blanditiis id ipsum. Distinctio quos nisi, totam sunt ex voluptatum? Neque alias laborum ipsum doloremque fuga earum in autem. Hic alias omnis facilis facere eum assumenda deleniti ad, maiores laudantium temporibus odio non, molestiae dolorum! Quo mollitia ex sapiente maiores excepturi?"
+      "title": "Entrance",
+      "artist": "Frank",
+      "audioUrl": "/music_sample/pop_sample.wav",
+      "coverUrl": "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/01/27/Pictures/_4fdc2bc8-40e0-11ea-bfa0-35d85fc987f6.jpg"
+    },
+    {
+      "id": "4",
+      "title": "synth-pop x dance",
+      "artist": "Miami",
+      "audioUrl": "/music_sample/synth-pop-x-danc.wav",
+      "coverUrl": "https://www.classicpopmag.com/wp-content/webpc-passthru.php?src=https://www.classicpopmag.com/wp-content/uploads/2020/03/photo-1483412033650-1015ddeb83d1.jpeg&nocache=1"
+    },
+    {
+      "id": "5",
+      "title": "Ambient drums",
+      "artist": "Vocazu",
+      "audioUrl": "/music_sample/ambient-drums.wav",
+      "coverUrl": "https://e.snmc.io/i/600/s/f643881d051f449c9a2e9c193e44c219/5754408/mikael-seifu-the-lost-drum-beat-brass-Cover-Art.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Lil Peep x sad guitar",
+      "artist": "Quazzi",
+      "audioUrl": "/music_sample/lil-peep-x-sad-guitar.wav",
+      "coverUrl": "https://examples.devmastery.pl/assets/audio/hangtime.jpg"
     }
   ]
 }
