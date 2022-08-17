@@ -9,11 +9,11 @@ Use npm install and node express.js to run test server
 A drum machine website designed to introduce users to basic music making and recording. Features include a full webpage, an interactive tutorial and multiple drum settings. Demo music included as well as voice recording. Future versions to include and connect to the database in projojet for user uploads and logins. 
 
 ## Pictures 
-![Homepage]()
-![About]()
-![Drum]()
-![Contact]()
-![Login]()
+![Homepage](https://github.com/wyc6990906/LHL_FinalProject/blob/master/Docs/Hompage.png)
+![About](https://github.com/wyc6990906/LHL_FinalProject/blob/master/Docs/About.png)
+![Drum](https://github.com/wyc6990906/LHL_FinalProject/blob/master/Docs/Drum.png)
+![Contact](https://github.com/wyc6990906/LHL_FinalProject/blob/master/Docs/Contact.png)
+![Login](https://github.com/wyc6990906/LHL_FinalProject/blob/master/Docs/Login.png)
 
 ## Depedancies
 "axios": "^0.27.2",
