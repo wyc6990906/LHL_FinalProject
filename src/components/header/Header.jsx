@@ -61,6 +61,7 @@ const Header = () => {
                   <li className="menu-item"><Link to="/drum_machine" className="menu-link">Drum Machine</Link></li>
                   <li className="menu-item"><Link to="/tutorial" className="menu-link">Tutorial</Link></li>
                   <li className="menu-item"><Link to="/contact" className="menu-link">Contact</Link></li>
+                  <li className="menu-item"><Link to="/login" className="menu-link">Login</Link></li>
                 </ul>
               </nav>
             </div>
