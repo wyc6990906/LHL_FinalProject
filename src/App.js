@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="main-wrapper clearfix">`
+        <div className="main-wrapper clearfix">
           <Header/>
           <section className="content">
             <Switch>

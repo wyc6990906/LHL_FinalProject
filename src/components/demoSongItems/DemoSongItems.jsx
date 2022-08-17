@@ -18,6 +18,7 @@ const DemoSongItems = ({song, isCurrent, onSelect}) => {
       >
         {song.title} by {song.artist}
       </li>
+
     </div>
 
   );

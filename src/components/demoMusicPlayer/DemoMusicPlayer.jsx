@@ -5,6 +5,9 @@ const musicDemo1 = '../../music_instrument/'
 const DemoMusicPlayer = ({ showControls = false, song }) => {
   const audioRef = useRef();
   const { audioUrl, coverUrl } = song;
+  console.log(audioUrl)
+  // const demoUrl1 = `../../../music/demo.mp3`
+  // const demoUrl2 = `../../../music/demo2.wav`
   return (
     <section className="SongPlayer">
       <img width="250" height="250" src={coverUrl} alt="Song cover" />
