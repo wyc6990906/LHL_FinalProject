@@ -33,7 +33,7 @@ For test server:
 ## Running JSON Server
 Visit the website below and follow the instructions:
 ```sh
-https://github.com/lighthouse-labs/scheduler-api
+https://www.npmjs.com/package/json-server
 ```
 
 ## Available Scripts
