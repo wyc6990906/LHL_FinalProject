@@ -30,6 +30,12 @@ For test server:
 "express": "^4.18.1",
 "pg": "^8.7.3",
 
+## Running JSON Server
+Visit the website below and follow the instructions:
+```sh
+https://github.com/lighthouse-labs/scheduler-api
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
