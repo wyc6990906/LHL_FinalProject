@@ -5,13 +5,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Setup
 Use npm install and node express.js to run test server
 
-## Depedancies
-
-
 ## Discription 
+A drum machine website designed to introduce users to basic music making and recording. Features include a full webpage, an interactive tutorial and multiple drum settings. Demo music included as well as voice recording. Future versions to include and connect to the database in projojet for user uploads and logins. 
 
 ## Pictures 
-![]()
+![Homepage]()
+![About]()
+![Drum]()
+![Contact]()
+![Login]()
+
+## Depedancies
+"axios": "^0.27.2",
+"bootstrap": "^5.2.0",
+"driver.js": "^0.9.8",
+"mic-recorder-to-mp3": "^2.2.2",
+"react-voice-recorder": "^2.1.2",
+
+For test server:
+"bcrypt": "^5.0.1",
+"bcryptjs": "^2.4.3",
+"body-parser": "^1.20.0",
+"cookie-session": "^2.0.0",
+"express": "^4.18.1",
+"pg": "^8.7.3",
 
 ## Available Scripts
 
